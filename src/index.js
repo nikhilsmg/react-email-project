@@ -32,6 +32,21 @@ class App extends Component {
       });
   };
 
+  getEmailDescription = (email) => {
+    fetch('https://flipkart-email-mock.now.sh/?id='+email.id)
+      .then(result => {
+        return result.json();
+      })
+      .then(jsonResult => {
+        console.log(jsonResult);
+        email.body = jsonResult.body;
+        console.log(email);
+        this.setState({
+          selectedEmail: email
+        })
+      });
+  }
+
   componentDidMount() {
     this.getEmailList();
   }
@@ -44,8 +59,8 @@ class App extends Component {
       const index = unreadList.indexOf(email);
       unreadList.splice(index, 1);
     }
+    this.getEmailDescription(email);
     this.setState({
-      selectedEmail: email,
       readList,
       unreadList,
     });
@@ -215,7 +230,7 @@ class App extends Component {
                       </button>
                     </span>
                     <p>{this.state.selectedEmail.date}</p>
-                    <p>{this.state.selectedEmail.short_description}</p>
+                    <div dangerouslySetInnerHTML={{__html:this.state.selectedEmail.body}}></div>
                   </div>
                 </div>
               </div>
