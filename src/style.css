@@ -1,0 +1,94 @@
+h1, p {
+  font-family: Lato;
+}
+
+body{
+  background-color: #f4f5f9 !important;
+  color: #636363 !important;
+}
+
+.btnFilter {
+  margin: 5px;
+  border-radius:30px; 
+  border: none;
+  outline: none;
+  padding: 0px 16px;
+  background-color: #f4f5f9;
+  cursor: pointer;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btnFilter:hover {
+  background-color: #e1e4ea;
+  color: #636363;
+}
+
+#myDIV {
+  margin-bottom: 30px;
+}
+
+.left{
+    width:40%;
+    float:left;
+    height:100%;
+}
+
+.right{
+    margin-left:40%;
+    position: fixed;
+    width: 50%;
+}
+
+.card {
+  display: inline-block !important;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 10px !important;
+}
+
+.read {
+  background-color: #f2f2f2 !important;
+}
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+
+.containerEmail{
+  padding: 30px !important;
+}
+
+.mainDiv {
+  margin: 4%;
+}
+
+.emailTitle{
+  display: inline-block;
+  width: 100%;
+}
+
+.emailSubject{
+  display: inline-block;
+  float: left;
+}
+
+.favoriteBtn{
+  display: inline-block;
+  float: right;
+  background-color: #e54065;
+  border-radius: 15px;
+  padding: 0px 15px;
+  color: #fff;
+  border: #cfd2d3;
+  font-size: 12px;
+}
+
+.favoriteText{
+  color: #e54065;
+}
